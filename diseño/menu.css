@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: linear-gradient(to right, #D251BF 30%, #6DC1F3 60%);
+    padding: 20px;
+}
+
+
+ul {
+    border-radius: 80px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+li {
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 8px 12px;
+    position: relative; /* Añadido para permitir la línea debajo */
+    transition: color 0.3s; /* Solo la transición del color */
+}
+a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #86357a;
+    transition: width 0.3s; /* Animación suave */
+}
+a:hover {
+    color: #ffffff;
+}
+a:hover::after {
+    width: 100%; /* Cuando el enlace está en hover, la línea se expande */
+}
+
