@@ -1,53 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú de Navegación</title>
-    <link rel="stylesheet" href="diseño/menu.css">
-    <link rel="stylesheet" href="diseño/cuerpo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil UX/UI</title>
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+        
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ffffff;
+    }
+    header {
+      background-color: #73c9ed;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+       
+      width: 40px;
+      height: 40px;
+    }
+    .perfil-container {
+      background-color: #b7e7ea;
+      margin: 90px auto;
+      width: 80%;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+    .perfil-foto {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      position: absolute;
+      top: -60px;
+      left: 20%;
+      transform: translateX(-50%);
+      background-color: #ffffff;
+    }
+    .nombre-cargo {
+      margin-left: 200px;
+      background-color: #79adc2;
+      display: inline-block;
+      padding:20px 90px;
+      border-radius: 80px;
+      font-weight: bold;
+      font-size: 20px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acercade.html">Sobre Mi</a></li>
-        </ul>
-    </nav>
-    
 
-<div class="cuerpo">
+<header>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Sobre Mi</a>
+  </nav>
+  <img src="logo.png" alt="Logo" class="logo">
+</header>
 
-    <div class="profile-container">
-        <!-- Imagen de perfil -->
-        <img src="recursos/1.jpg" alt="Foto de perfil" class="profile-image">
-        
-        <!-- Texto al lado de la imagen -->
-        <div class="profile-text">
-            <p>Hola, soy Maria Estefani Salgado Osorio</p>
-            <p>Diseñadora UX/UI</p>
-        </div>
+<section class="perfil-container">
+  <img src="foto-perfil.png" alt="Foto de perfil" class="perfil-foto">
+  <div class="nombre-cargo">
+    MARIA ESTEEANI SALGADO OSORIO <br>
+    DISEÑADORA UX/UI
+  </div>
+</section>
 
-        
+
+
+
+
+
+
+<section class="sobre-mi">
+    <h2>SOBRE MI</h2>
+    <div class="contenido-sobre-mi">
+      <p><em>Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.</em></p>
+      <button class="boton-cv">Ver CV</button>
     </div>
-    <p>Soy diseñadora UX/UI apasionada, con experiencia en tecnología y 
-        comunicación visual, enfocada en crear experiencias digitales intuitivas, 
-        atractivas y funcionales, aportando valor y mejorando la interacción usuario-plataforma.</p>
+  </section>
+  
+  <section class="habilidades-duras">
+    <h2>HABILIDADES DURAS</h2>
+    <div class="habilidades-contenedor">
+      <div class="habilidad">
+        <img src="figma-icon.png" alt="Figma">
+        <div class="barra">
+          <div class="progreso" style="width: 90%; background-color: #00c4ff;"></div>
+        </div>
+      </div>
+      <div class="habilidad">
+        <img src="illustrator-icon.png" alt="Illustrator">
+        <div class="barra">
+          <div class="progreso" style="width: 80%; background-color: orange;"></div>
+        </div>
+      </div>
+      <div class="habilidad">
+        <img src="photoshop-icon.png" alt="Photoshop">
+        <div class="barra">
+          <div class="progreso" style="width: 50%; background-color: navy;"></div>
+        </div>
+      </div>
+      <div class="habilidad">
+        <img src="xd-icon.png" alt="Adobe XD">
+        <div class="barra">
+          <div class="progreso" style="width: 60%; background-color: purple;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <section class="habilidades-blandas">
+    <h2>HABILIDADES BLANDAS</h2>
+    <div class="blandas-contenedor">
+      <div class="blanda">
+        <h3>COMUNICACIÓN</h3>
+        <p>Expresar ideas con claridad y escuchar activamente.</p>
+      </div>
+      <div class="blanda">
+        <h3>EMPATÍA</h3>
+        <p>Comprender y conectar con las emociones de los demás.</p>
+      </div>
+      <div class="blanda">
+        <h3>CURIOSIDAD Y TRABAJO CONTINUO</h3>
+        <p>Buscar nuevos conocimientos y mejorar constantemente.</p>
+      </div>
+      <div class="blanda">
+        <h3>TRABAJO EN EQUIPO</h3>
+        <p>Colaborar y adaptarse para lograr objetivos comunes.</p>
+      </div>
+      <div class="blanda">
+        <h3>CREATIVIDAD</h3>
+        <p>Generar ideas innovadoras y resolver problemas de forma original.</p>
+      </div>
+      <div class="blanda">
+        <h3>PENSAMIENTO CRÍTICO</h3>
+        <p>Analizar información y tomar decisiones fundamentadas.</p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <div class="container">
+    <div class="card">
+        <h3>Intereses</h3>
+        <ul>
+            <li>Diseño y estética</li>
+            <li>Experiencia de usuario (UX)</li>
+            <li>Investigación y usabilidad</li>
+            <li>Tecnología y desarrollo web</li>
+            <li>Innovación y tendencias</li>
+            <li>Colaboración y trabajo en equipo</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Valores</h3>
+        <ul>
+            <li>Empatía</li>
+            <li>Accesibilidad</li>
+            <li>Iniciativa</li>
+            <li>Iteración y mejora continua</li>
+            <li>Consistencia</li>
+            <li>Colaboración</li>
+            <li>Innovación</li>
+            <li>Ética</li>
+        </ul>
+    </div>
 </div>
 
 
 
 
+<br>
 
-
-<footer id="footer">
-    <p>&copy; 2025 Maria Estefani Salgado Osorio. Todos los derechos reservados.</p>
-</footer>
-
-
-
-<script src="script/nav.js"></script>
-
+<div class="contact-section">
+    <h2>Contáctame</h2>
+    <div class="contact-options">
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+            <p>LinkedIn</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo">
+            <p>mariaestefanyosorio@gmail.com</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            <p>7677-2488</p>
+        </div>
+        <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Teléfono">
+            <p>7677-2488</p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    © 2025 María Salgado. All rights reserved.
+</div>
 </body>
 </html>
-
