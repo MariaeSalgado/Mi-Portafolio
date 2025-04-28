@@ -16,8 +16,16 @@ body {
   
   .sobre-mi {
     margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
   }
-  
+
+  .sobre-mi.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .contenido-sobre-mi {
     background-color: #c0e6ff;
     padding: 20px;
@@ -27,20 +35,20 @@ body {
     width: 80%;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
-  
+
   .contenido-sobre-mi p {
     font-size: 16px;
     color: #003366;
     text-align: justify;
     line-height: 1.6;
   }
-  
+
   .nota-especial {
     margin-top: 20px;
     color: #006600;
     font-size: 18px;
   }
-  
+
   .boton-cv {
     margin-top: 20px;
     background-color: #6ef7a7;
@@ -51,13 +59,28 @@ body {
     color: #006400;
     border-radius: 30px;
     cursor: pointer;
-    transition: background 0.3s;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  
+
   .boton-cv:hover {
     background-color: #4de290;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
   .habilidades-duras {
     margin: 40px 20px;
   }
@@ -76,6 +99,12 @@ body {
     border-radius: 20px;
     width: 150px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .habilidad:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   }
   
   .habilidad img {
@@ -96,6 +125,8 @@ body {
     border-radius: 5px;
   }
   
+  
+
 
   .habilidades-blandas {
     margin: 40px 20px;
@@ -123,6 +154,12 @@ body {
     width: 220px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blanda:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
   
   .blanda h3 {
@@ -135,13 +172,14 @@ body {
     font-size: 14px;
     color: #333;
   }
+  
   .container {
     margin-left: 250px;
     display: flex;
     gap: 20px;
-}
-.card {
- 
+  }
+  
+  .card {
     background-color: rgb(255, 255, 255);
     border: 1px solid #6cbbdd;
     border-radius: 8px;
@@ -149,19 +187,29 @@ body {
     padding: 20px;
     width: 300px;
     margin: 20px;
-}
-.card h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
     margin-top: 0;
     text-align: center;
-}
-.card ul {
+  }
+  
+  .card ul {
     list-style-type: disc;
     padding-left: 20px;
-}  
+  }
+  
 
 
 
 .contact-section {
+  border-radius: 10px;
     background-color: #eaf6ff;
     text-align: center;
     padding: 30px;
@@ -189,6 +237,7 @@ body {
     margin-bottom: 5px;
 }
 .footer {
+  border-radius: 10px;
     background-color: #85c9f8;
     text-align: center;
     padding: 10px;

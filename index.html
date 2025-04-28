@@ -91,38 +91,40 @@
 
 
 
-
 <section class="sobre-mi">
-    <h2>SOBRE MI</h2>
-    <div class="contenido-sobre-mi">
-      <p><em>Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.</em></p>
-      <button class="boton-cv">Ver CV</button>
-    </div>
-  </section>
+  <h2>SOBRE MI</h2>
+  <div class="contenido-sobre-mi">
+    <p><em>Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.</em></p>
+    <button class="boton-cv">Ver CV</button>
+  </div>
   
   <section class="habilidades-duras">
     <h2>HABILIDADES DURAS</h2>
     <div class="habilidades-contenedor">
       <div class="habilidad">
-        <img src="figma-icon.png" alt="Figma">
+        <img src="/recursos/Figma.png" alt="Figma" >
+        <h1>Figma</h1>
         <div class="barra">
           <div class="progreso" style="width: 90%; background-color: #00c4ff;"></div>
         </div>
       </div>
       <div class="habilidad">
-        <img src="illustrator-icon.png" alt="Illustrator">
+        <img src="/recursos/adobe.png" alt="Illustrator">
+        <h1>illustrator</h1>
         <div class="barra">
           <div class="progreso" style="width: 80%; background-color: orange;"></div>
         </div>
       </div>
       <div class="habilidad">
-        <img src="photoshop-icon.png" alt="Photoshop">
+        <img src="/recursos/photo.png" alt="Photoshop">
+        <h1>Photoshop</h1>
         <div class="barra">
           <div class="progreso" style="width: 50%; background-color: navy;"></div>
         </div>
       </div>
       <div class="habilidad">
-        <img src="xd-icon.png" alt="Adobe XD">
+        <img src="/recursos/xd.png" alt="Adobe XD">
+        <h1>Adobe XD</h1>
         <div class="barra">
           <div class="progreso" style="width: 60%; background-color: purple;"></div>
         </div>
@@ -168,6 +170,8 @@
     </div>
   </section>
   
+
+  <h2></h2>
 
 
   <div class="container">
@@ -222,9 +226,44 @@
             <p>7677-2488</p>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+    
 </div>
+
+
+
+
 <div class="footer">
     © 2025 María Salgado. All rights reserved.
 </div>
 </body>
+
+
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const sobreMiSection = document.querySelector(".sobre-mi");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          sobreMiSection.classList.add("visible");
+        }
+      });
+    });
+
+    observer.observe(sobreMiSection);
+  });
+
+
+</script>
 </html>
