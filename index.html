@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil UX/UI</title>
   <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
-        
       margin: 0;
       font-family: 'Arial', sans-serif;
       background-color: #ffffff;
@@ -31,7 +31,6 @@
       align-items: center;
     }
     .logo {
-       
       width: 40px;
       height: 40px;
     }
@@ -66,43 +65,126 @@
       font-size: 20px;
       color: white;
     }
+    
+    /* Estilos para el botón de idioma */
+    .language-switcher {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .language-btn {
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #73c9ed, #79adc2);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(115, 201, 237, 0.3);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      transform: translateY(0);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .language-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(115, 201, 237, 0.4);
+    }
+    
+    .language-btn:active {
+      transform: translateY(1px);
+    }
+    
+    .language-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .language-btn:hover::after {
+      opacity: 1;
+    }
+    
+    .language-btn i {
+      margin-right: 8px;
+      font-size: 1.1em;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .language-btn.pulse {
+      animation: pulse 1.5s infinite;
+    }
   </style>
 </head>
 <body>
 
+<!-- Botón de cambio de idioma -->
+<div class="language-switcher">
+  <button class="language-btn pulse" id="languageBtn">
+    <i class="fas fa-language"></i>
+    <span>English</span>
+  </button>
+</div>
+
 <header>
   <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Sobre Mi</a>
+    <a href="#" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="#" data-es="Sobre Mi" data-en="About Me">Sobre Mi</a>
   </nav>
   <img src="logo.png" alt="Logo" class="logo">
 </header>
 
 <section class="perfil-container">
   <img src="foto-perfil.png" alt="Foto de perfil" class="perfil-foto">
-  <div class="nombre-cargo">
-    MARIA ESTEEANI SALGADO OSORIO <br>
+  
+  
+  <div class="nombre-cargo" 
+  data-es="MARIA ESTEEANI SALGADO OSORIO  DISEÑADORA UX/UI" 
+  data-en="MARIA ESTEEANI SALGADO OSORIO UX/UI DESIGNER">
+    MARIA ESTEFANI SALGADO OSORIO 
     DISEÑADORA UX/UI
   </div>
+
+
+
+
 </section>
 
-
-
-
-
-
 <section class="sobre-mi">
-  <h2>SOBRE MI</h2>
+  <h2 data-es="SOBRE MI" data-en="ABOUT ME">SOBRE MI</h2>
   <div class="contenido-sobre-mi">
-    <p><em>Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.</em></p>
-    <button class="boton-cv">Ver CV</button>
+    <p><em data-es="Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro." 
+              data-en="I am a passionate UX/UI designer with experience in technology and visual communication. My focus is on creating intuitive and aesthetically pleasing digital experiences, always looking for the best solution for the end user. I love working on innovative and enriching projects that allow me to combine creativity, technology and functionality. My goal is always to improve the interaction between people and digital platforms, adding significant value to every project I'm involved in.">
+      Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.
+    </em></p>
+    <button class="boton-cv" data-es="Ver CV" data-en="View CV">Ver CV</button>
   </div>
   
   <section class="habilidades-duras">
-    <h2>HABILIDADES DURAS</h2>
+    <h2 data-es="HABILIDADES DURAS" data-en="HARD SKILLS">HABILIDADES DURAS</h2>
     <div class="habilidades-contenedor">
       <div class="habilidad">
-        <img src="/recursos/Figma.png" alt="Figma" >
+        <img src="/recursos/Figma.png" alt="Figma">
         <h1>Figma</h1>
         <div class="barra">
           <div class="progreso" style="width: 90%; background-color: #00c4ff;"></div>
@@ -110,21 +192,21 @@
       </div>
       <div class="habilidad">
         <img src="/recursos/adobe.png" alt="Illustrator">
-        <h1>illustrator</h1>
+        <h1 data-es="illustrator" data-en="Illustrator">illustrator</h1>
         <div class="barra">
           <div class="progreso" style="width: 80%; background-color: orange;"></div>
         </div>
       </div>
       <div class="habilidad">
         <img src="/recursos/photo.png" alt="Photoshop">
-        <h1>Photoshop</h1>
+        <h1 data-es="Photoshop" data-en="Photoshop">Photoshop</h1>
         <div class="barra">
           <div class="progreso" style="width: 50%; background-color: navy;"></div>
         </div>
       </div>
       <div class="habilidad">
         <img src="/recursos/xd.png" alt="Adobe XD">
-        <h1>Adobe XD</h1>
+        <h1 data-es="Adobe XD" data-en="Adobe XD">Adobe XD</h1>
         <div class="barra">
           <div class="progreso" style="width: 60%; background-color: purple;"></div>
         </div>
@@ -132,82 +214,75 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
   <section class="habilidades-blandas">
-    <h2>HABILIDADES BLANDAS</h2>
+    <h2 data-es="HABILIDADES BLANDAS" data-en="SOFT SKILLS">HABILIDADES BLANDAS</h2>
     <div class="blandas-contenedor">
       <div class="blanda">
-        <h3>COMUNICACIÓN</h3>
-        <p>Expresar ideas con claridad y escuchar activamente.</p>
+        <h3 data-es="COMUNICACIÓN" data-en="COMMUNICATION">COMUNICACIÓN</h3>
+        <p data-es="Expresar ideas con claridad y escuchar activamente." 
+           data-en="Express ideas clearly and listen actively.">Expresar ideas con claridad y escuchar activamente.</p>
       </div>
       <div class="blanda">
-        <h3>EMPATÍA</h3>
-        <p>Comprender y conectar con las emociones de los demás.</p>
+        <h3 data-es="EMPATÍA" data-en="EMPATHY">EMPATÍA</h3>
+        <p data-es="Comprender y conectar con las emociones de los demás." 
+           data-en="Understand and connect with others' emotions.">Comprender y conectar con las emociones de los demás.</p>
       </div>
       <div class="blanda">
-        <h3>CURIOSIDAD Y TRABAJO CONTINUO</h3>
-        <p>Buscar nuevos conocimientos y mejorar constantemente.</p>
+        <h3 data-es="CURIOSIDAD Y TRABAJO CONTINUO" data-en="CURIOSITY AND CONTINUOUS WORK">CURIOSIDAD Y TRABAJO CONTINUO</h3>
+        <p data-es="Buscar nuevos conocimientos y mejorar constantemente." 
+           data-en="Seek new knowledge and constantly improve.">Buscar nuevos conocimientos y mejorar constantemente.</p>
       </div>
       <div class="blanda">
-        <h3>TRABAJO EN EQUIPO</h3>
-        <p>Colaborar y adaptarse para lograr objetivos comunes.</p>
+        <h3 data-es="TRABAJO EN EQUIPO" data-en="TEAMWORK">TRABAJO EN EQUIPO</h3>
+        <p data-es="Colaborar y adaptarse para lograr objetivos comunes." 
+           data-en="Collaborate and adapt to achieve common goals.">Colaborar y adaptarse para lograr objetivos comunes.</p>
       </div>
       <div class="blanda">
-        <h3>CREATIVIDAD</h3>
-        <p>Generar ideas innovadoras y resolver problemas de forma original.</p>
+        <h3 data-es="CREATIVIDAD" data-en="CREATIVITY">CREATIVIDAD</h3>
+        <p data-es="Generar ideas innovadoras y resolver problemas de forma original." 
+           data-en="Generate innovative ideas and solve problems in original ways.">Generar ideas innovadoras y resolver problemas de forma original.</p>
       </div>
       <div class="blanda">
-        <h3>PENSAMIENTO CRÍTICO</h3>
-        <p>Analizar información y tomar decisiones fundamentadas.</p>
+        <h3 data-es="PENSAMIENTO CRÍTICO" data-en="CRITICAL THINKING">PENSAMIENTO CRÍTICO</h3>
+        <p data-es="Analizar información y tomar decisiones fundamentadas." 
+           data-en="Analyze information and make informed decisions.">Analizar información y tomar decisiones fundamentadas.</p>
       </div>
     </div>
   </section>
-  
 
   <h2></h2>
 
-
   <div class="container">
     <div class="card">
-        <h3>Intereses</h3>
+        <h3 data-es="Intereses" data-en="Interests">Intereses</h3>
         <ul>
-            <li>Diseño y estética</li>
-            <li>Experiencia de usuario (UX)</li>
-            <li>Investigación y usabilidad</li>
-            <li>Tecnología y desarrollo web</li>
-            <li>Innovación y tendencias</li>
-            <li>Colaboración y trabajo en equipo</li>
+            <li data-es="Diseño y estética" data-en="Design and aesthetics">Diseño y estética</li>
+            <li data-es="Experiencia de usuario (UX)" data-en="User Experience (UX)">Experiencia de usuario (UX)</li>
+            <li data-es="Investigación y usabilidad" data-en="Research and usability">Investigación y usabilidad</li>
+            <li data-es="Tecnología y desarrollo web" data-en="Technology and web development">Tecnología y desarrollo web</li>
+            <li data-es="Innovación y tendencias" data-en="Innovation and trends">Innovación y tendencias</li>
+            <li data-es="Colaboración y trabajo en equipo" data-en="Collaboration and teamwork">Colaboración y trabajo en equipo</li>
         </ul>
     </div>
     <div class="card">
-        <h3>Valores</h3>
+        <h3 data-es="Valores" data-en="Values">Valores</h3>
         <ul>
-            <li>Empatía</li>
-            <li>Accesibilidad</li>
-            <li>Iniciativa</li>
-            <li>Iteración y mejora continua</li>
-            <li>Consistencia</li>
-            <li>Colaboración</li>
-            <li>Innovación</li>
-            <li>Ética</li>
+            <li data-es="Empatía" data-en="Empathy">Empatía</li>
+            <li data-es="Accesibilidad" data-en="Accessibility">Accesibilidad</li>
+            <li data-es="Iniciativa" data-en="Initiative">Iniciativa</li>
+            <li data-es="Iteración y mejora continua" data-en="Iteration and continuous improvement">Iteración y mejora continua</li>
+            <li data-es="Consistencia" data-en="Consistency">Consistencia</li>
+            <li data-es="Colaboración" data-en="Collaboration">Colaboración</li>
+            <li data-es="Innovación" data-en="Innovation">Innovación</li>
+            <li data-es="Ética" data-en="Ethics">Ética</li>
         </ul>
     </div>
-</div>
+  </div>
 
+  <br>
 
-
-
-<br>
-
-<div class="contact-section">
-    <h2>Contáctame</h2>
+  <div class="contact-section">
+    <h2 data-es="Contáctame" data-en="Contact Me">Contáctame</h2>
     <div class="contact-options">
         <div>
             <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
@@ -226,26 +301,62 @@
             <p>7677-2488</p>
         </div>
     </div>
+  </div>
 
-
-
-
-
-
-
-
-
-    
-</div>
-
-
-
-
-<div class="footer">
+  <div class="footer" data-es="© 2025 María Salgado. Todos los derechos reservados." 
+       data-en="© 2025 María Salgado. All rights reserved.">
     © 2025 María Salgado. All rights reserved.
-</div>
-</body>
+  </div>
+</section>
 
+<script>
+  let currentLanguage = 'es';
+  const languageBtn = document.getElementById('languageBtn');
+  
+  languageBtn.addEventListener('click', function() {
+      // Eliminar animación de pulso al hacer clic
+      this.classList.remove('pulse');
+      
+      // Pequeña animación de "click"
+      this.style.transform = 'translateY(2px)';
+      setTimeout(() => {
+          this.style.transform = 'translateY(-3px)';
+          
+          // Cambiar idioma después de la animación
+          currentLanguage = currentLanguage === 'es' ? 'en' : 'es';
+          updateLanguage();
+          
+          // Restaurar animación de pulso después de 1 segundo
+          setTimeout(() => {
+              this.classList.add('pulse');
+          }, 1000);
+          
+      }, 100);
+  });
+  
+  function updateLanguage() {
+      // Actualizar texto del botón
+      const btnText = languageBtn.querySelector('span');
+      btnText.textContent = currentLanguage === 'es' ? 'English' : 'Español';
+      
+      // Actualizar elementos con atributos data-es y data-en
+      document.querySelectorAll('[data-es], [data-en]').forEach(element => {
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+              element.placeholder = element.getAttribute(`data-${currentLanguage}`);
+          } else {
+              element.textContent = element.getAttribute(`data-${currentLanguage}`);
+          }
+      });
+      
+      // Actualizar el atributo lang del documento
+      document.documentElement.lang = currentLanguage;
+      
+      // Actualizar el título de la página
+      document.title = currentLanguage === 'es' ? 'Perfil UX/UI' : 'UX/UI Profile';
+  }
+</script>
+</body>
+</html>
 
 <script>
 
