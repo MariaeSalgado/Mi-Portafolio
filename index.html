@@ -59,7 +59,7 @@
       margin-left: 200px;
       background-color: #79adc2;
       display: inline-block;
-      padding:20px 90px;
+      padding:10px 90px;
       border-radius: 80px;
       font-weight: bold;
       font-size: 20px;
@@ -134,6 +134,263 @@
     .language-btn.pulse {
       animation: pulse 1.5s infinite;
     }
+
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-top: 1px solid lightblue;
+    padding-top: 10px;
+  }
+  
+  .sobre-mi {
+    margin: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .sobre-mi.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .contenido-sobre-mi {
+    background-color: #c0e6ff;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .contenido-sobre-mi p {
+    font-size: 16px;
+    color: #003366;
+    text-align: justify;
+    line-height: 1.6;
+  }
+
+  .nota-especial {
+    margin-top: 20px;
+    color: #006600;
+    font-size: 18px;
+  }
+
+  .boton-cv {
+    margin-top: 20px;
+    background-color: #6ef7a7;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #006400;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .boton-cv:hover {
+    background-color: #4de290;
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  .habilidades-duras {
+    margin: 40px 20px;
+  }
+  
+  .habilidades-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .habilidad {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 20px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .habilidad:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .habilidad img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .barra {
+    background-color: #ccc;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .progreso {
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  
+  .habilidades-blandas {
+    margin: 40px 20px;
+  }
+  
+  .habilidades-blandas h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    border-top: 1px solid lightblue;
+    padding-top: 10px;
+  }
+  
+  .blandas-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .blanda {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blanda:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .blanda h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .blanda p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .container {
+    margin-left: 250px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #6cbbdd;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px #6cbbdd;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+
+
+
+.contact-section {
+  border-radius: 10px;
+    background-color: #eaf6ff;
+    text-align: center;
+    padding: 30px;
+}
+.contact-section h2 {
+    margin: 0 0 20px 0;
+}
+.contact-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #cce7ff;
+    padding: 20px;
+    border-radius: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.contact-options div {
+    text-align: center;
+}
+.contact-options img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.footer {
+    border-radius: 10px;
+    background-color: #85c9f8;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+.espacio {
+ 
+ 
+  background-color: #79adc2;
+  display: inline-block;
+  padding:10px 90px;
+  border-radius: 80px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+} 
   </style>
 </head>
 <body>
@@ -157,16 +414,23 @@
 <section class="perfil-container">
   <img src="foto-perfil.png" alt="Foto de perfil" class="perfil-foto">
   
-  
-  <div class="nombre-cargo" 
-  data-es="MARIA ESTEEANI SALGADO OSORIO  DISEÑADORA UX/UI" 
-  data-en="MARIA ESTEEANI SALGADO OSORIO UX/UI DESIGNER">
+
+
+
+  <div class="espacio">
+ 
+  <div class="nombre-cargo">
     MARIA ESTEFANI SALGADO OSORIO 
+  </div>
+
+  <div class="nombre-cargo" 
+  data-es="DISEÑADORA UX/UI" 
+  data-en="UX/UI DESIGNER">
+  
     DISEÑADORA UX/UI
   </div>
 
-
-
+</div>
 
 </section>
 
@@ -281,6 +545,82 @@
 
   <br>
 
+  <h2 data-es="PROYECTOS" data-en="PROJECTS">PROYECTOS</h2>
+
+  <div class="carousel">
+    <div class="carousel-track">
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 1">
+                <h3 data-es="Proyecto 1" data-en="Projects 1" >Proyecto 1</h3>
+                <p>Descripción del Proyecto 1</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 2">
+                <h3 data-es="Proyecto 2" data-en="Projects 2" >Proyecto 2</h3>
+                <p>Descripción del Proyecto 2</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 3">
+                <h3 data-es="Proyecto 3" data-en="Projects 3">Proyecto 3</h3>
+                <p>Descripción del Proyecto 3</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 4">
+                <h3 data-es="Proyecto 4" data-en="Projects 4">Proyecto 4</h3>
+                <p>Descripción del Proyecto 4</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 5">
+                <h3 data-es="Proyecto 5" data-en="Projects 5">Proyecto 5</h3>
+                <p>Descripción del Proyecto 5</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 6">
+                <h3 data-es="Proyecto 6" data-en="Projects 6">Proyecto 6</h3>
+                <p>Descripción del Proyecto 6</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 7">
+                <h3 data-es="Proyecto 7" data-en="Projects 7">Proyecto 7</h3>
+                <p>Descripción del Proyecto 7</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="Proyecto 8">
+                <h3 data-es="Proyecto 8" data-en="Projects 8">Proyecto 8</h3>
+                <p>Descripción del Proyecto 8</p>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-button" id="prevButton">&#9664;</button>
+        <button class="carousel-button" id="nextButton">&#9654;</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+  
+
   <div class="contact-section">
     <h2 data-es="Contáctame" data-en="Contact Me">Contáctame</h2>
     <div class="contact-options">
@@ -310,6 +650,41 @@
 </section>
 
 <script>
+
+
+const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+
+        let currentIndex = 0;
+        const itemsToShow = 3;
+        const totalItems = items.length;
+
+        function updateCarousel() {
+            const itemWidth = items[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalItems - itemsToShow : currentIndex - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex >= totalItems - itemsToShow) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+
+
+
+
+
+
+
+
   let currentLanguage = 'es';
   const languageBtn = document.getElementById('languageBtn');
   
