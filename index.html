@@ -162,38 +162,99 @@
 
   <br>
 
-  <h2 data-es="PROYECTOS" data-en="PROJECTS">PROYECTOS</h2>
-
-  <div class="carousel">
-    <div class="carousel-track">
-        <div class="carousel-item">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Proyecto 1">
-                <h3 data-es="Proyecto 1" data-en="Projects 1" >Proyecto 1</h3>
-                <p>Descripción del Proyecto 1</p>
+  <div class="projects-section">
+    <div class="projects-container">
+        <h2 class="projects-title" data-es="Mis Proyectos" data-en="My Projects">Mis Proyectos</h2>
+        
+        <div class="projects-carousel">
+            <button class="carousel-btn prev" onclick="moveProjects(-1)">&#10094;</button>
+            
+            <div class="projects-track" id="projectsTrack">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <img src="/recursos/inicio.png" alt="Proyecto 1" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Legal Connect" data-en="Legal Connect">Legal Connect</h3>
+                        <p class="project-description" data-es="Sistema integral para la gestión de casos legales con funcionalidades avanzadas." 
+                           data-en="Comprehensive system for legal case management with advanced features.">
+                            Sistema integral para la gestión de casos legales con funcionalidades avanzadas.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/xXSalvadorAndradeXx/LegalConnect" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="/recursos/huerto.png" alt="Proyecto 2" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Huerto en Mano" data-en="Huerto en Mano">Huerto en Mano</h3>
+                        <p class="project-description" data-es="Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos." 
+                           data-en="Platform for urban garden management, including blockchain forums and data visualization.">
+                            Plataforma para gestión de huertos urbanos, incluyendo foros de blockchain y visualización de datos.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Blockchain</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Juan-Carlos-Mejia/huertoenmano" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <img src="/recursos/camaron.png" alt="Proyecto 3" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Don Camarón Sistema Interno" data-en="Don Camarón Internal System">Don Camarón Sistema Interno</h3>
+                        <p class="project-description" data-es="Sistema interno para la gestión operativa de un restaurante." 
+                           data-en="Internal system for operational management of a restaurant.">
+                            Sistema interno para la gestión operativa de un restaurante.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">ASP.NET</span>
+                            <span class="tech-tag">Visual Basic</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link" data-es="Código" data-en="Code">Código</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 -->
+                <div class="project-card">
+                    <img src="/recursos/investiga.png" alt="Proyecto 4" class="project-image">
+                    <div class="project-info">
+                        <h3 class="project-title" data-es="Evaluación de Salud Mental" data-en="Mental Health Evaluation">Evaluación de Salud Mental</h3>
+                        <p class="project-description" data-es="Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas durante el Ciclo 01-2024 en la Universidad Gerardo Barrios, Centro Regional de Usulután." 
+                           data-en="Evaluation of the mental health level of students in the Faculty of Legal Sciences during the 01-2024 Semester at Universidad Gerardo Barrios, Regional Center of Usulután.">
+                            Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas durante el Ciclo 01-2024 en la Universidad Gerardo Barrios, Centro Regional de Usulután.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Psicología</span>
+                            <span class="tech-tag">Estadística</span>
+                            <span class="tech-tag">Metodología Cualitativa</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="/recursos/Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas, durante el Ciclo 01-2024 en la Universidad Gerardo Barrios, Centro Regional de Usulután.pdf" target="_blank" class="project-link" data-es="Ver Detalles" data-en="View Details">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
+            <button class="carousel-btn next" onclick="moveProjects(1)">&#10095;</button>
         </div>
-        <div class="carousel-item">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Proyecto 2">
-                <h3 data-es="Proyecto 2" data-en="Projects 2" >Proyecto 2</h3>
-                <p>Descripción del Proyecto 2</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Proyecto 3">
-                <h3 data-es="Proyecto 3" data-en="Projects 3">Proyecto 3</h3>
-                <p>Descripción del Proyecto 3</p>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Proyecto 4">
-                <h3 data-es="Proyecto 4" data-en="Projects 4">Proyecto 4</h3>
-                <p>Descripción del Proyecto 4</p>
-            </div>
-        </div>
+    </div>
+</div>
         
     </div>
     <div class="carousel-controls">
@@ -240,33 +301,59 @@
 <script>
 
 
-const track = document.querySelector('.carousel-track');
-        const items = document.querySelectorAll('.carousel-item');
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
 
-        let currentIndex = 0;
-        const itemsToShow = 3;
-        const totalItems = items.length;
-
-        function updateCarousel() {
-            const itemWidth = items[0].getBoundingClientRect().width;
-            track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+ // JavaScript para el carrusel de proyectos
+ let currentProjectIndex = 0;
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectsTrack = document.getElementById('projectsTrack');
+        const projectsPerView = 3;
+        
+        function updateProjectsDisplay() {
+            const cardWidth = projectCards[0].offsetWidth + 40; // Ancho + margen
+            projectsTrack.style.transform = `translateX(-${currentProjectIndex * cardWidth}px)`;
+            
+            // Ocultar/mostrar botones según la posición
+            document.querySelector('.carousel-btn.prev').style.display = 
+                currentProjectIndex === 0 ? 'none' : 'flex';
+            
+            document.querySelector('.carousel-btn.next').style.display = 
+                currentProjectIndex >= projectCards.length - projectsPerView ? 'none' : 'flex';
         }
-
-        prevButton.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? totalItems - itemsToShow : currentIndex - 1;
-            updateCarousel();
+        
+        function moveProjects(direction) {
+            const maxIndex = projectCards.length - projectsPerView;
+            
+            currentProjectIndex += direction;
+            
+            if (currentProjectIndex < 0) {
+                currentProjectIndex = 0;
+            } else if (currentProjectIndex > maxIndex) {
+                currentProjectIndex = maxIndex;
+            }
+            
+            updateProjectsDisplay();
+        }
+        
+        // Ajustar para pantallas más pequeñas
+        function handleResize() {
+            const width = window.innerWidth;
+            
+            if (width <= 900) {
+                projectsPerView = 2;
+            } else if (width <= 600) {
+                projectsPerView = 1;
+            } else {
+                projectsPerView = 3;
+            }
+            
+            updateProjectsDisplay();
+        }
+        
+        window.addEventListener('resize', handleResize);
+        document.addEventListener('DOMContentLoaded', () => {
+            handleResize();
+            updateProjectsDisplay();
         });
-
-        nextButton.addEventListener('click', () => {
-            currentIndex = (currentIndex >= totalItems - itemsToShow) ? 0 : currentIndex + 1;
-            updateCarousel();
-        });
-
-        window.addEventListener('resize', updateCarousel);
-
-
 
 
 
