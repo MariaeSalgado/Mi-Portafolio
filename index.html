@@ -31,9 +31,6 @@
 <section class="perfil-container">
   <img src="foto-perfil.png" alt="Foto de perfil" class="perfil-foto">
   
-
-
-
   <div class="espacio">
  
   <div class="nombre-cargo">
@@ -54,13 +51,18 @@
 <section class="sobre-mi">
   <h2 data-es="SOBRE MI" data-en="ABOUT ME">SOBRE MI</h2>
   <div class="contenido-sobre-mi">
+    <div class="texto">
     <p><em data-es="Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro." 
               data-en="I am a passionate UX/UI designer with experience in technology and visual communication. My focus is on creating intuitive and aesthetically pleasing digital experiences, always looking for the best solution for the end user. I love working on innovative and enriching projects that allow me to combine creativity, technology and functionality. My goal is always to improve the interaction between people and digital platforms, adding significant value to every project I'm involved in.">
       Soy una apasionada diseñadora UX/UI con experiencia en el campo de la tecnología y la comunicación visual. Mi enfoque está en crear experiencias digitales intuitivas y estéticamente atractivas, siempre buscando la mejor solución para el usuario final. Me encanta trabajar en proyectos innovadores y enriquecedores que me permiten fusionar creatividad, tecnología y funcionalidad. Mi objetivo es siempre mejorar la interacción entre las personas y las plataformas digitales, aportando un valor significativo a cada proyecto con el que me involucro.
+   
     </em></p>
+    
     <button class="boton-cv" data-es="Ver CV" data-en="View CV">Ver CV</button>
   </div>
-  
+  </div>
+</section>
+
   <section class="habilidades-duras">
     <h2 data-es="HABILIDADES DURAS" data-en="HARD SKILLS">HABILIDADES DURAS</h2>
     <div class="habilidades-contenedor">
@@ -411,19 +413,28 @@
 <script>
 
 
+ 
   document.addEventListener("DOMContentLoaded", () => {
-    const sobreMiSection = document.querySelector(".sobre-mi");
+    // Selecciona las secciones que quieres animar
+    const animatedSections = document.querySelectorAll(
+        ".sobre-mi, .habilidades-duras, .habilidades-blandas, .container, .projects-section"
+    );
 
+    // Configuración del IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          sobreMiSection.classList.add("visible");
-        }
-      });
-    });
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");  // Agrega la clase visible cuando se hace scroll
+                observer.unobserve(entry.target); // Deja de observar una vez que se ha activado la animación
+            }
+        });
+    }, { threshold: 0.3 });  // El umbral indica cuánto del elemento debe ser visible para activar la animación
 
-    observer.observe(sobreMiSection);
-  });
+    // Observamos cada sección
+    animatedSections.forEach((section) => {
+        observer.observe(section);
+    });
+});
 
 
 </script>
