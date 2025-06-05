@@ -679,3 +679,142 @@ color: white;
 .projects-section.visible {
   opacity: 1;
 }
+
+
+
+
+        .reconocimientos-container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+        }
+
+        .reconocimientos-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .reconocimientos-carousel {
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .reconocimientos-items {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .reconocimientos-card {
+            min-width: 180px;
+            height: 240px;
+            margin: 0 16px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .reconocimientos-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reconocimientos-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .reconocimientos-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 50%;
+        }
+
+        .reconocimientos-button.left {
+            left: -24px;
+        }
+
+        .reconocimientos-button.right {
+            right: -24px;
+        }
+
+        .reconocimientos-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s;
+            z-index: 1000;
+        }
+
+        .reconocimientos-modal.active {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .reconocimientos-modal-content {
+            background: rgb(177, 175, 171);
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            max-width: 90%;
+            width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        .reconocimientos-modal-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .reconocimientos-close-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: red;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .reconocimientos-description {
+          padding: 10px;
+          border-radius: 8px;
+          background-color: white;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+
+        /* Ensure modal is always on top */
+        body > *:not(.reconocimientos-modal) {
+            z-index: 0;
+        }

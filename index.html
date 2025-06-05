@@ -66,6 +66,33 @@
   </div>
 </section>
 
+<div class="reconocimientos-container">
+        <h2 class="reconocimientos-title" data-es="Mis Reconocimientos" data-en="My Recognitions">Mis Reconocimientos</h2>
+
+        <div class="reconocimientos-carousel">
+            <div class="reconocimientos-items" id="carouselItems">
+                <div class="reconocimientos-card" onclick="reconocimientosOpenModal('/diplimas/1.png', 'CCNAv7: Switching, Routing, and Wireless Essentials')">
+                    <img src="/diplimas/1.png" alt="Diploma 1">
+                </div>
+            
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="reconocimientos-modal" id="reconocimientos-modal">
+        <div class="reconocimientos-modal-content">
+            <button class="reconocimientos-close-btn" onclick="reconocimientosCloseModal()">&times;</button>
+            <img id="reconocimientos-modal-image" src="" alt="Diploma">
+            <p class="reconocimientos-description" id="reconocimientos-modal-description"></p>
+        </div>
+    </div>
+
+
+
+
+
+
   <section class="habilidades-duras">
     <h2 data-es="HABILIDADES DURAS" data-en="HARD SKILLS">HABILIDADES DURAS</h2>
     <div class="habilidades-contenedor">
@@ -258,10 +285,7 @@
           <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo">
           <p>mariaestefanyosorio@gmail.com</p>
       </div>
-      <div>
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-          <p>7677-2488</p>
-      </div>
+    
      
   </div>
 </div>
@@ -274,6 +298,32 @@
 </section>
 
 <script>
+
+
+
+
+
+
+  let currentPosition = 0;
+
+        function moveCarousel(direction) {
+            const carousel = document.getElementById('carouselItems');
+            const items = carousel.children.length;
+            const itemWidth = carousel.children[0].offsetWidth + 32; // Card width + margin
+            const visibleItems = Math.floor(carousel.parentElement.offsetWidth / itemWidth);
+            currentPosition = Math.max(0, Math.min(currentPosition + direction, items - visibleItems));
+            carousel.style.transform = `translateX(-${currentPosition * itemWidth}px)`;
+        }
+
+        function reconocimientosOpenModal(imageSrc, description) {
+            document.getElementById('reconocimientos-modal-image').src = imageSrc;
+            document.getElementById('reconocimientos-modal-description').innerText = description;
+            document.getElementById('reconocimientos-modal').classList.add('active');
+        }
+
+        function reconocimientosCloseModal() {
+            document.getElementById('reconocimientos-modal').classList.remove('active');
+        }
 
 
 
