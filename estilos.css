@@ -818,3 +818,122 @@ color: white;
         body > *:not(.reconocimientos-modal) {
             z-index: 0;
         }
+
+
+        .contacto-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    border-radius: 16px;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-form:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contacto-form .form-group {
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.contacto-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #2d3748;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form textarea {
+    width: 95%;
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #f8fafc;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    outline: none;
+    background-color: #ffffff;
+}
+
+.contacto-form input:hover,
+.contacto-form textarea:hover {
+    border-color: #c7d2fe;
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contacto-form .submit-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(79, 70, 229, 0.1);
+}
+
+.contacto-form .submit-btn:hover {
+    background: linear-gradient(135deg, #4338ca, #6d28d9);
+    box-shadow: 0 6px 12px rgba(79, 70, 229, 0.2);
+    transform: translateY(-2px);
+}
+
+.contacto-form .submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Efecto para campos requeridos no completados */
+.contacto-form input:invalid:not(:focus):not(:placeholder-shown),
+.contacto-form textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #44a2ef;
+    background-color: #ffffff;
+}
+
+/* Animación de carga para el botón */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.contacto-form .submit-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.contacto-form .submit-btn.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
