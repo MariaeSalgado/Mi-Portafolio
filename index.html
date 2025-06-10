@@ -388,6 +388,49 @@
     </div>
 </div>
 
+<div class="testimonials-section">
+    <h2 class="section-title">Testimonios</h2>
+    <div class="testimonials-container">
+        <!-- Testimonio 1 -->
+        <div class="testimonial-card" onclick="openTestimonial(1)">
+            <div class="testimonial-avatar">
+                <img src="ruta/a/foto1.jpg" alt="María González">
+            </div>
+            <h3 class="testimonial-name">María González</h3>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial-card" onclick="openTestimonial(2)">
+            <div class="testimonial-avatar">
+                <img src="ruta/a/foto2.jpg" alt="Carlos Martínez">
+            </div>
+            <h3 class="testimonial-name">Carlos Martínez</h3>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial-card" onclick="openTestimonial(3)">
+            <div class="testimonial-avatar">
+                <img src="ruta/a/foto3.jpg" alt="Ana Rodríguez">
+            </div>
+            <h3 class="testimonial-name">Ana Rodríguez</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Popup de Testimonio -->
+<div id="testimonialPopup" class="testimonial-popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closeTestimonial()">&times;</span>
+        <div class="popup-avatar">
+            <img id="popupAvatar" src="" alt="">
+        </div>
+        <h3 id="popupName" class="popup-name"></h3>
+        <p id="popupDate" class="popup-date"></p>
+        <div class="popup-testimonial">
+            <p id="popupText"></p>
+        </div>
+    </div>
+</div>
 
 
 
@@ -633,5 +676,57 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
 });
 
 
+</script>
+
+<script>
+  // Datos de ejemplo para los testimonios
+  const testimonials = [
+    {
+      id: 1,
+      name: "María González",
+      avatar: "ruta/a/foto1.jpg",
+      date: "15 de Enero, 2023",
+      text: "Excelente servicio. El equipo fue muy profesional y resolvió todos mis problemas rápidamente. Recomiendo totalmente sus servicios a cualquiera que busque calidad y eficiencia."
+    },
+    {
+      id: 2,
+      name: "Carlos Martínez",
+      avatar: "ruta/a/foto2.jpg",
+      date: "3 de Marzo, 2023",
+      text: "Quedé impresionado con la atención al detalle y el trato personalizado. Superaron todas mis expectativas y el resultado final fue exactamente lo que necesitaba."
+    },
+    {
+      id: 3,
+      name: "Ana Rodríguez",
+      avatar: "ruta/a/foto3.jpg",
+      date: "22 de Mayo, 2023",
+      text: "Trabajar con ellos ha sido una experiencia transformadora. Su enfoque innovador y su compromiso con la excelencia son evidentes en cada interacción y en los resultados obtenidos."
+    }
+  ];
+
+  function openTestimonial(id) {
+    const testimonial = testimonials.find(t => t.id === id);
+    if (testimonial) {
+      document.getElementById('popupAvatar').src = testimonial.avatar;
+      document.getElementById('popupName').textContent = testimonial.name;
+      document.getElementById('popupDate').textContent = testimonial.date;
+      document.getElementById('popupText').textContent = testimonial.text;
+      document.getElementById('testimonialPopup').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeTestimonial() {
+    document.getElementById('testimonialPopup').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Cerrar al hacer clic fuera del contenido
+  window.onclick = function(event) {
+    const popup = document.getElementById('testimonialPopup');
+    if (event.target === popup) {
+      closeTestimonial();
+    }
+  }
 </script>
 </html>
