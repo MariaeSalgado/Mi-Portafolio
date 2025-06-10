@@ -7,18 +7,72 @@
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
+        .typing-container {
+         margin-top: 20px;
+            text-align: center;
+        }
+        
+        .typing-text {
 
+            font-size: 20px;
+            font-weight: 600;
+            color: #2d3436;
+            display: inline-block;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 2.5rem;
+            background: #6c5ce7;
+            margin-left: 4px;
+            animation: blink 0.8s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
   </style>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phrase = "Transformando ideas en experiencias digitales memorables";
+            const typingTextElement = document.getElementById('typing-text');
+            const cursorElement = document.querySelector('.cursor');
+            
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function typeWriter() {
+                const currentText = typingTextElement.textContent;
+                
+                if (!isDeleting && charIndex < phrase.length) {
+                    // Escribiendo
+                    typingTextElement.textContent = phrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    setTimeout(typeWriter, 100);
+                } else if (isDeleting && charIndex > 0) {
+                    // Borrando
+                    typingTextElement.textContent = phrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    // Cambiar modo
+                    isDeleting = !isDeleting;
+                    // Pausa antes de empezar a borrar/escribir
+                    setTimeout(typeWriter, isDeleting ? 1500 : 500);
+                }
+            }
+            
+            // Iniciar la animación
+            setTimeout(typeWriter, 500);
+        });
+    </script>
 </head>
 <body>
 
 <!-- Botón de cambio de idioma -->
-<div class="language-switcher">
-  <button class="language-btn pulse" id="languageBtn">
-    <i class="fas fa-language"></i>
-    <span>English</span>
-  </button>
-</div>
+
 
 <header>
   <nav>
@@ -26,7 +80,18 @@
     <a href="#" data-es="Sobre Mi" data-en="About Me">Sobre Mi</a>
   </nav>
   <img src="logo.png" alt="Logo" class="logo">
+  <div class="language-switcher">
+  <button class="language-btn pulse" id="languageBtn">
+    <i class="fas fa-language"></i>
+    <span>English</span>
+  </button>
+</div>
+
+
 </header>
+
+
+   
 
 <section class="perfil-container">
   <img src="/recursos/USSS026222.jpg" alt="Foto de perfil" class="perfil-foto">
@@ -42,12 +107,16 @@
   data-en="UX/UI DESIGNER">
   
     DISEÑADORA UX/UI
+    
   </div>
 
 </div>
-
+<div class="typing-container">
+        <span class="typing-text" id="typing-text"></span>
+        <span class="cursor">|</span>
+    </div>
 </section>
-
+ 
 <section class="sobre-mi">
   <h2 data-es="SOBRE MI" data-en="ABOUT ME">SOBRE MI</h2>
   <div class="contenido-sobre-mi">
@@ -199,7 +268,7 @@
         <h2 class="projects-title" data-es="Proyectos" data-en=" Projects">Proyectos</h2>
         
         <div class="projects-carousel">
-            <button class="carousel-btn prev" onclick="moveProjects(-1)">&#10094;</button>
+          
             
             <div class="projects-track" id="projectsTrack">
                 <!-- Proyecto 1 -->
@@ -252,18 +321,76 @@
                 
                 <!-- Proyecto 4 -->
                 
-            
-            <button class="carousel-btn next" onclick="moveProjects(1)">&#10095;</button>
+          
         </div>
     </div>
 </div>
         
     </div>
-    <div class="carousel-controls">
-        <button class="carousel-button" id="prevButton">&#9664;</button>
-        <button class="carousel-button" id="nextButton">&#9654;</button>
+  
+</div>
+
+
+
+
+
+
+
+<div id="publicacion-salud-mental">
+    <div class="publicacion-container">
+        <hr class="publicacion-divider">
+        <h2 class="publicacion-titulo" data-es="Evaluación de Salud Mental" data-en="Mental Health Evaluation">
+            Evaluación de Salud Mental
+        </h2>
+        
+        <div class="publicacion-content">
+            <div class="publicacion-imagen-container">
+                <img src="/recursos/investiga.png" alt="Investigación en Salud Mental" class="publicacion-imagen">
+                <div class="publicacion-badge">Estudio Científico</div>
+            </div>
+            
+            <div class="publicacion-detalles">
+                <p class="publicacion-autores">Autor: [Tu Nombre]</p>
+                <p class="publicacion-institucion">Universidad Gerardo Barrios, Centro Regional de Usulután</p>
+                <p class="publicacion-fecha">Ciclo 01-2024</p>
+                
+                <div class="publicacion-resumen">
+                    <h3 data-es="Resumen" data-en="Abstract">Resumen</h3>
+                    <p data-es="Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas durante el Ciclo 01-2024." 
+                       data-en="Evaluation of the mental health level of students in the Faculty of Legal Sciences during the 01-2024 Semester.">
+                        Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas durante el Ciclo 01-2024 en la Universidad Gerardo Barrios, Centro Regional de Usulután.
+                    </p>
+                </div>
+                
+                <div class="publicacion-metodos">
+                    <h3 data-es="Métodos" data-en="Methods">Métodos</h3>
+                    <ul>
+                        <li data-es="Estudio cuantitativo" data-en="Quantitative study">Estudio cuantitativo</li>
+                        <li data-es="Muestreo estratificado" data-en="Stratified sampling">Muestreo estratificado</li>
+                        <li data-es="Instrumentos validados" data-en="Validated instruments">Instrumentos validados</li>
+                    </ul>
+                </div>
+                
+                <div class="publicacion-tags">
+                    <span class="tag">Psicología</span>
+                    <span class="tag">Educación Superior</span>
+                    <span class="tag">Salud Pública</span>
+                </div>
+                
+                <a href="/recursos/Evaluación del nivel en la salud mental de los estudiantes de la Facultad de Ciencias Jurídicas, durante el Ciclo 01-2024 en la Universidad Gerardo Barrios, Centro Regional de Usulután.pdf" 
+                   class="publicacion-descarga" 
+                   target="_blank"
+                   data-es="Descargar Estudio Completo" 
+                   data-en="Download Full Study">
+                    Descargar Estudio Completo
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+
+
+
 
 <h2 data-es="Contáctame" data-en="Contact Me">Contáctame</h2>
  <form class="contacto-form" id="contactForm">
