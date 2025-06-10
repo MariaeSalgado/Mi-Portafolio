@@ -1,3 +1,35 @@
+/* Estilo para navegadores basados en WebKit */
+::-webkit-scrollbar {
+width: 12px; /* Ancho de la barra de scroll */
+}
+
+::-webkit-scrollbar-track {
+background: rgb(69, 183, 235); /* Fondo de la pista */
+border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+background-color: rgb(0, 229, 255); /* Color del thumb */
+border-radius: 10px;
+border: 2px solid rgb(0, 108, 138); /* Esquinas redondeadas */
+/* Bordes para un efecto de separación */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: rgb(0, 50, 75); /* Color al pasar el cursor */
+}
+
+/* Opcional: Barra de scroll horizontal */
+::-webkit-scrollbar:horizontal {
+height: 8px; /* Altura de la barra de scroll horizontal */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+border-radius: 5px; /* Esquinas redondeadas para la barra horizontal */
+}
+
+
 body {
   overflow-x: hidden;
   margin: 0;
