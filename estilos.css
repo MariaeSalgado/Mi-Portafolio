@@ -58,6 +58,19 @@ nav {
   display: flex;
   align-items: center;
 }
+nav a:hover {
+    
+  text-decoration: underline;
+}
+
+
+
+
+header img {
+    
+  display: flex;
+  align-items: center;
+}
 
 
 .logo {
