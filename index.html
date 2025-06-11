@@ -3,72 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- En el <head> del documento -->
+<meta name="description" content="Portafolio profesional de María Salgado, diseñadora UX/UI en El Salvador. Experiencia en creación de interfaces digitales intuitivas y atractivas.">
+<meta name="keywords" content="diseñadora UX, diseñadora UI, portafolio diseño, El Salvador, Figma, Adobe XD, experiencia de usuario">
+<meta name="author" content="María Salgado">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="[URL del sitio]">
+<meta property="og:title" content="María Salgado - Diseñadora UX/UI Profesional">
+<meta property="og:description" content="Portafolio de María Salgado, especialista en diseño de experiencia e interfaz de usuario en El Salvador.">
+<meta property="og:image" content="[URL de la imagen principal]">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="[URL del sitio]">
+<meta property="twitter:title" content="María Salgado - Diseñadora UX/UI Profesional">
+<meta property="twitter:description" content="Portafolio de María Salgado, especialista en diseño de experiencia e interfaz de usuario en El Salvador.">
+<meta property="twitter:image" content="[URL de la imagen principal]">
   <title>Soy Maria Salgado</title>
      <link rel="icon" href="/recursos/LOGUITO.png" type="image/x-icon">
   <link rel="stylesheet" href="estilos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-        .typing-container {
-         margin-top: 20px;
-            text-align: center;
-        }
-        
-        .typing-text {
 
-            font-size: 20px;
-            font-weight: 600;
-            color: #2d3436;
-            display: inline-block;
-        }
-        
-        .cursor {
-            display: inline-block;
-            width: 3px;
-            height: 1.5rem;
-            background: #000000;
-            margin-left: 4px;
-            animation: blink 0.8s infinite;
-        }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-  </style>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const phrase = "Transformando ideas en experiencias digitales memorables";
-            const typingTextElement = document.getElementById('typing-text');
-            const cursorElement = document.querySelector('.cursor');
-            
-            let charIndex = 0;
-            let isDeleting = false;
-            
-            function typeWriter() {
-                const currentText = typingTextElement.textContent;
-                
-                if (!isDeleting && charIndex < phrase.length) {
-                    // Escribiendo
-                    typingTextElement.textContent = phrase.substring(0, charIndex + 1);
-                    charIndex++;
-                    setTimeout(typeWriter, 100);
-                } else if (isDeleting && charIndex > 0) {
-                    // Borrando
-                    typingTextElement.textContent = phrase.substring(0, charIndex - 1);
-                    charIndex--;
-                    setTimeout(typeWriter, 50);
-                } else {
-                    // Cambiar modo
-                    isDeleting = !isDeleting;
-                    // Pausa antes de empezar a borrar/escribir
-                    setTimeout(typeWriter, isDeleting ? 1500 : 500);
-                }
-            }
-            
-            // Iniciar la animación
-            setTimeout(typeWriter, 500);
-        });
-    </script>
+ 
 </head>
 <body>
 
@@ -830,5 +788,38 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       closeTestimonial();
     }
   }
+
+          document.addEventListener('DOMContentLoaded', function() {
+            const phrase = "Transformando ideas en experiencias digitales memorables";
+            const typingTextElement = document.getElementById('typing-text');
+            const cursorElement = document.querySelector('.cursor');
+            
+            let charIndex = 0;
+            let isDeleting = false;
+            
+            function typeWriter() {
+                const currentText = typingTextElement.textContent;
+                
+                if (!isDeleting && charIndex < phrase.length) {
+                    // Escribiendo
+                    typingTextElement.textContent = phrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    setTimeout(typeWriter, 100);
+                } else if (isDeleting && charIndex > 0) {
+                    // Borrando
+                    typingTextElement.textContent = phrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    setTimeout(typeWriter, 50);
+                } else {
+                    // Cambiar modo
+                    isDeleting = !isDeleting;
+                    // Pausa antes de empezar a borrar/escribir
+                    setTimeout(typeWriter, isDeleting ? 1500 : 500);
+                }
+            }
+            
+            // Iniciar la animación
+            setTimeout(typeWriter, 500);
+        });
 </script>
 </html>
